@@ -20,7 +20,7 @@ class RemoveStoreItemFromBackendMenuExt extends ExtensionInit
     public $description = 'Remove the store link item from the backend menu';
 
     // current version of this extension
-    public $version = '1.0';
+    public $version = '1.0.1';
 
     // minimum app version
     public $minAppVersion = '1.3.6.2';
@@ -49,7 +49,7 @@ class RemoveStoreItemFromBackendMenuExt extends ExtensionInit
      */
     public function run()
     {
-        // hook into the menu geberation filter
+        // hook into the menu generation filter
         Yii::app()->hooks->addFilter('backend_left_navigation_menu_items', function($menuItems){
             // unset the given menu item
             unset($menuItems['store']);
